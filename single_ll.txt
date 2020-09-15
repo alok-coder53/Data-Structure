@@ -1,0 +1,107 @@
+--what is linked list ?
+    -no continous memory allocation
+    -links are established using pointers
+    for ex:
+    
+    temp         
+     head                   curr                                                                         tail
+    
+    
+    
+                                            slow                                    fast
+    data   next
+    (12,addofnextnode)->(13,addofnextnode)->(15,addofnextnode)->(16,addofnextnode)->(20,nullptr)
+                                                       1_1.5 traversal
+                                                       2_fast and slow pointer 
+
+class node
+{
+    public:
+        int m_data;
+        node* next;
+        node(int data):m_data(data),next(nullptr){}
+};
+
+
+
+-take input from user----insert at tail/head
+        
+    node* takeinput()
+    {
+    int data{};
+    std::cin >> data;
+    node* head = nullptr;
+    node* tail = nullptr;
+    node* n = new node(data);
+    while(data!=-1)
+    {
+        if(head == nullptr)
+        {
+            head = tail =n;
+        }
+        else
+        {
+            tail->next = n;
+            tail = n;
+        }
+        std::cin >> data;
+    }
+    return head;
+}
+
+node* takeinput()
+    {
+    int data{};
+    std::cin >> data;
+    node* head = nullptr;
+    node* tail = nullptr;
+    node* n = new node(data);
+    while(data!=-1)
+    {
+        if(head == nullptr)
+        {
+            head = tail =n;
+        }
+        else
+        {
+            head = n->next;
+            head = n;
+        }
+        std::cin >> data;
+    }
+    return head;
+}
+-print linked list
+    void print_list(node* head)
+    {
+        while(head!=nullptr)
+        {
+        std::cout<<head->m_data<<" ";
+        head = head->next;
+        }
+    }
+
+-linked list of employee..
+-calculate length
+-calculate length (recursive)
+-print ith node
+-insert node at ith pos
+-delete ith node
+-search a particular record
+-serach a particular record (recursive)
+-find middle element-------->
+-reverse ll
+-remove ith node from end
+-merge two sorted linked list
+-merge two sorted linked list(recursive)
+-sorting on ll
+
+
+
+
+slow and fast pointer
+class vs structure
+structure
+{
+
+}
