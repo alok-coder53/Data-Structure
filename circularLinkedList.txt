@@ -1,0 +1,10 @@
+
+
+head
+data   next
+(1,12,addofnextnode)->(2,13,addofnextnode)->(3,15,addofnextnode)->(4,16,addofnextnode)->(5,20,addofFirstNode)
+
+
+
+
+(key,data,addofnextnode)
